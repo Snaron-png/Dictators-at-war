@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dictators at War - Interaktív minijáték, saját karakter készítő">
+    <title>Karakter: Saját karakter készítése</title>
+    <link rel="icon" type="image/png" href="../kepek/logo.png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../javaScript/sajat_karakter.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Fooldal.html">
+                <img src="../kepek/logo.png" alt="Dictators at war logo" class="logo">
+                <span>Kezdőlap</span>
+            </a> 
+        </nav>
+    </header>
+    <main>
+        <form action="">
+            <div class="profile">
+                <div class="image-wrap">
+                    <div class="img-choser">
+                        <img src="../kepek/Sajat1.png" alt="1. karakter">
+                        <img src="../kepek/Sajat2.png" alt="2. karakter">
+                        <img src="../kepek/Sajat3.png" alt="3.karakter">
+                        <img src="../kepek/Sajat4.png" alt="4.karakter">
+                        <img src="../kepek/Sajat5.png" alt="5.karakter">
+                        <img src="../kepek/Sajat_blank.png" alt="blank karakter" class="selected">
+                    </div>
+                    <div class="text-box">
+                        <label for="char-name">Karaktered neve:</label>
+                        <input id="char-name" name="char-name" type="text" placeholder="Írd be a karaktered nevét"/>
+                        <label for="char-desc">Rövid leírás:</label>
+                        <textarea id="char-desc" name="char-desc" placeholder="Írj le egy rövid leírást a karakteredről"></textarea>
+                        <div class="radio">
+                            <label for="nem">A karaktered neme:</label>
+                            <input id="nem" type="radio" name="nem" value="ferfi"> Férfi
+                            <input id="nem" type="radio" name="nem" value="no"> Nő
+                            <input id="nem" type="radio" name="nem" value="egyeb"> Egyéb
+                        </div>
+                        <div>
+                            <button class="btn" id="save" type="button">Mentés és vissza</button>  
+                        </div>
+                    </div>
+                </div>
+
+            <section class="statok">
+                <div class="stat-container">
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-karizma">Karizma</label>
+                        <input id="stat-karizma" name="karizma" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-szonoklat">Szónoklat</label>
+                        <input id="stat-szonoklat" name="szonoklat" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-propaganda">Propaganda</label>
+                        <input id="stat-propaganda" name="propaganda" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-vezetes">Vezetés</label>
+                        <input id="stat-vezetes" name="vezetes" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-strategia">Stratégia</label>
+                        <input id="stat-strategia" name="strategia" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-furgeseg">Fürgeség</label>
+                        <input id="stat-furgeseg" name="furgeseg" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-ero">Erő</label>
+                        <input id="stat-ero" name="ero" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-empatia">Empátia</label>
+                        <input id="stat-empatia" name="empatia" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-intelligencia">Intelligencia</label>
+                        <input id="stat-intelligencia" name="intelligencia" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <label class="stat-label" for="stat-megbizhatosag">Megbízhatóság</label>
+                        <input id="stat-megbizhatosag" name="megbizhatosag" type="range" min="0" max="10" step="1" value="1">
+                        <div class="stat-value">1</div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <span class="disclaimer"><strong>Figyelem:</strong> Az oldalon található leírások történelmi és oktatási céllal készültek; nem dicsőítjük a szereplők tetteit. Egyes témák érzékenyek lehetnek — kérjük, kezelje őket felelősséggel.</span>
+        <p>&copy; 2025 Dictators at War. Minden jog fenntartva. Készítette Somogyi Náron Örs</p>
+    </footer>
+</body>
+</html>

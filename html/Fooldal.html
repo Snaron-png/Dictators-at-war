@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dictators at War - Interaktív minijáték, ahol karakterek harcolnak statisztikák alapján.">
+    <title>Dictators at war</title>
+    <link rel="icon" type="image/png" href="../kepek/logo.png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../javaScript/fooldal.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="../kepek/logo.png" alt="Dictators at war logo" class="logo">
+    </header>
+    <main>
+        <div class="home">
+            <h1>Dictators at War</h1>
+            <p>Íme a legjobb diktátoros minigame a galaxisban! Tekintsd meg a karaktereket, az alábbi gombokra kattintva, készíts saját diktátort (egy időben csak egy saját karaktered lehet), vagy irány egyenesen a <a href="#fight-form">harc</a>, ahol bármelyik diktátorral csatába szállhatsz és legyőzheted ellenfeled!</p>
+            <nav>
+                <div class="buttons">
+                    <div>
+                        <a class="btn" href="Aladeen.html">Aladeen</a>
+                    </div>
+                    <div>
+                        <a class="btn" href="Caesar.html">Caesar</a>
+                    </div>
+                    <div>
+                        <a class="btn" href="Mao.html">Mao Ce-tung</a>
+                    </div>
+                    <div>
+                        <a class="btn" href="Sztalin.html">Sztálin</a>
+                    </div>
+                    <div>
+                        <a class="btn" href="Hitler.html">Hitler</a>
+                    </div>
+                    <div>
+                        <a class="btn" id="sajatbtn" href="Sajat.html">Készíts saját karaktert!</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="home">
+            <div>
+                <h2>Ring</h2>
+                <p>Íme a ring melyben kiválaszthatsz kettőt a legnagyobb diktátorok közül és összemérheted erejüket egy epikus csatában, vagy ha készítettél saját karaktert, akkor megmérettetheted ellenük! Használd a legördülő menüket, majd kattints a "Harc!" gombra és nézd végig életed legdurvább küzdelmét!</p>
+            </div>
+            <form id="fight-form" action="">
+                <div class="fightForm">
+                <label for="fighter-a">Válassz harcost:</label>
+                <select id="fighter-a" name="fighter-a">
+                    <option value="">--Válassz egy karaktert--</option>
+                    <option value="aladeen">Aladeen</option>
+                    <option value="caesar">Caesar</option>
+                    <option value="mao">Mao Ce-tung</option>
+                    <option value="sztalin">Sztálin</option>
+                    <option value="hitler">Hitler</option>
+                </select>
+
+                <label for="fighter-b">Válassz ellenfelet:</label>
+                <select id="fighter-b" name="fighter-b">
+                    <option value="">--Válassz egy karaktert--</option>
+                    <option value="aladeen">Aladeen</option>
+                    <option value="caesar">Caesar</option>
+                    <option value="mao">Mao Ce-tung</option>
+                    <option value="sztalin">Sztálin</option>
+                    <option value="hitler">Hitler</option>
+                </select>
+                </div>
+                <div>
+                    <button id="fight-button" class="btn" type="button">Harc!</button>
+                </div>
+            </form>
+            <div id="ring">
+                    <img id="aImg" src="" alt="A harcos">
+                    <img id="bImg" src="" alt="B harcos">
+                <div class="health" id="healthA">
+                    <div id="aHB">
+                        <div id="aHBfill"></div>
+                    </div>
+                    <span id="aHealth"></span>
+                </div>
+                <div class="health" id="healthB">
+                    <div id="bHB">
+                        <div id="bHBfill"></div>
+                    </div>
+                    <span id="bHealth"></span>
+                </div>
+            </div>
+            <div id="winnerPopup" class="popup">
+            <div class="popup-content">
+                <h2 id="winnerName">Winner!</h2>
+                <img id="winnerImg" src="" alt="Winner Image">
+                <button class="btn" id="closePopup">Bezárás</button>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span class="disclaimer"><strong>Figyelem:</strong> Az oldalon található leírások történelmi és oktatási céllal készültek; nem dicsőítjük a szereplők tetteit. Egyes témák érzékenyek lehetnek — kérjük, kezelje őket felelősséggel.</span>
+        <p>&copy; 2025 Dictators at War. Minden jog fenntartva. Készítette Somogyi Náron Örs</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+25&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --bg: #e6dbcd;
+    --card: #ffffff;
+    --text: #222327;
+    --muted: #6b6b6b;
+    --accent: #3a6f96;
+    --accent-dark: #2a5574;
+    --danger: #8b2f2f;
+    --border: #d6ccc2;
+    --shadow: 0 6px 18px rgba(20,30,40,0.06);
+    --light: #a39e99;
+    --dark: #333;
+}
+html {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height:1.5;
+    background-color: var(--bg);
+    color: var(--text);
+}
+header {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: 1em;
+    background-color: var(--bg);
+}
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.9em;
+    color: var(--light);
+    background-color: var(--dark);
+}
+footer p {
+    padding-top: 30px;
+}
+.logo {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+nav {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    display: block;
+    width: 200px;
+    margin: auto;
+    line-height: 0.8;
+}
+a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: var(--text);
+}
+a:hover {
+    opacity: 75%;
+    transform: translateY(-2px);
+}
+.home {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    background-color: var(--card);
+    box-shadow: var(--shadow);
+    padding: 5px 10px;
+}
+.home h1 {
+    margin: 10px auto;
+}
+.home p {
+    margin-bottom: 10px;
+}
+.buttons {
+    margin: auto;
+    max-width: 90%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 16px 18px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-align: center;
+    transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+    border: 1px solid var(--border);
+    letter-spacing: 2px;
+    background-color: var(--accent);
+    margin: 5px 0;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.98;
+    background-color: var(--accent-dark);
+}
+.btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 5px rgba(58,111,150,0.22);
+    border-radius: 6px;
+}
+#sajatbtn {
+    background-color: var(--accent-dark);
+}
+#sajatbtn:hover {
+    background-color: var(--danger);
+}
+.profile {
+    background-color: var(--card);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: var(--shadow);
+}
+.text-box h1 {
+    margin-bottom: 1.5rem;
+    color: var(--accent-dark);
+    letter-spacing: 1px;
+}
+.karakter {
+    margin: auto;
+    max-width: 90%;
+    display: block;
+}
+.stat-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    margin-top: 1rem;
+    height: 100%;
+    column-gap: 10px;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    position: relative;
+}
+.stat-item::after {
+    position: absolute;
+    bottom: 60%;
+    left: 25%;
+    background: var(--accent-dark);
+    color: #fff;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.stat-item:nth-child(1):hover::after {
+    content: "A kar izma! Növeli a sebzést";
+}
+.stat-item:nth-child(2):hover::after {
+    content: "Több élet kezdéskor";
+}
+.stat-item:nth-child(3):hover::after {
+    content: "Csökkenti az ellenség sebzését";
+}
+.stat-item:nth-child(4):hover::after {
+    content: "Növeli a sebzést";
+}
+.stat-item:nth-child(5):hover::after {
+    content: "Növeli a sebzést";
+}
+.stat-item:nth-child(6):hover::after {
+    content: "Csökkenti az ellenség sebzését";
+}
+.stat-item:nth-child(7):hover::after {
+    content: "Növeli a sebzést";
+}
+.stat-item:nth-child(8):hover::after {
+    content: "Csökkenti a sebzést";
+}
+.stat-item:nth-child(9):hover::after {
+    content: "Több élet kezdéskor";
+}
+.stat-item:nth-child(10):hover::after {
+    content: "Több élet kezdéskor";
+}
+.stat-item:hover::after {
+    opacity: 1;
+}
+.stat-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333;
+}
+.stat-bar {
+    height: 24px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+.stat-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 4px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+#char-desc, #char-name{
+    width: 98%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+#char-desc {
+    height: 200px;
+    resize: none;
+}
+.img-choser {
+    display: flex;
+    margin: 0 auto 580px auto;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    max-width: 400px;
+}
+.img-choser img{
+    width: 18%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.img-choser img:hover {
+    border: 5px solid var(--border);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.selected {
+    position: absolute;
+    transform: scale(5);
+    transition: transform 0.3s ease;
+    top: 320%;
+    display: block;
+}
+img.selected:hover {
+    border: none;
+    cursor: default;
+    border-radius: 0;
+}
+#save {
+    background-color: var(--accent-dark);
+}
+#save:hover {
+    cursor: pointer;
+}
+.radio {
+    text-align: center;
+    margin: 20px;
+}
+.radio label {
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+}
+#ring {
+    display: grid;
+    width: 95%;
+    margin: 10px auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+#aImg, #bImg {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow);
+    margin-top: 10px;
+    justify-self: center;
+    align-self: baseline;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+.attackB {
+    transform: translateX(-50px);
+}
+.attackA {
+    transform: translateX(50px);
+}
+.health {
+    grid-row: 2;
+    margin: 10px;
+    opacity: 0;
+}
+#aHB, #bHB {
+    width: 100%;
+    height: 20px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+}
+#aHBfill, #bHBfill {
+    height: 100%;
+    width: 100%;
+    background-color: green;
+}
+#aHealth, #bHealth {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text);
+}
+#fight-button {
+    margin-top: 10px;
+    font-weight: 700;
+    width: 30%;
+    background-color: var(--accent-dark);
+}
+#fight-button:hover {
+    background-color: var(--danger);
+}
+.fightForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px auto;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.popup-content {
+  background: var(--card);
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transform: scale(1);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.popup-content img {
+  max-width: 150px;
+  margin: 10px auto;
+  display: block;
+}
+@media (min-width: 570px) and (max-width: 1023px) {
+    .stat-container {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 26em) {
+    .img-choser {
+        margin-bottom: 500px;
+    }
+}
+@media (min-width: 64em) {
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+    }
+    .buttons div {
+        margin: 0;
+    }
+    .btn {
+        margin: 0;
+        padding: 18px 24px;
+    }
+    .profile {
+        display: flex;
+        gap: 1rem;
+        align-items: stretch;
+        border: 1px solid var(--border);
+        margin: auto;
+        margin-bottom: 0.5rem;
+        padding: 0.5em;
+        box-sizing: border-box;
+        width: 1050px;
+    }
+    .statok {
+        order: 1;
+        flex: 0 0 20%;
+        max-width: 50em;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        margin-top: 0;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+    .home p {
+        margin: 0 50px;
+    }
+    .image-wrap {
+        display: flex;
+        height: 100%;
+        box-sizing: border-box;
+        order: 2;
+        flex: 1 1 80%;
+    }
+    .img-box {
+        height: 100%;
+        margin-right: 0.5rem;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .img-choser {
+        display: flex;
+        height: 100%;
+        margin-right: 3rem;
+        flex-direction: row;
+        max-width: 60%;
+    }
+    .selected {
+        transform: scale(4.5);
+        top: 300%;
+    }
+    .karakter{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .text-box{
+        width: 235px;
+    }
+    .text-box p{
+        margin: 0;
+        color: #333;
+        font-size: 1,2rem;
+        line-height: 1.35;
+    }
+    .stat-item::after {
+        left: 105%;
+        bottom: 30%;
+    }
+    #char-desc, #char-name {
+        text-align: left;
+        width: 100%;
+        margin-right: 20px;
+        box-sizing: border-box;
+    }
+    #char-desc {
+        height: 513px;
+    }
+    #save {
+        padding: 20px 18px;
+    }
+    .fightForm {
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .attackB {
+        transform: translateX(-80px);
+    }
+    .attackA {
+        transform: translateX(80px);
+    }
+}
